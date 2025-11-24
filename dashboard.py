@@ -789,13 +789,10 @@ tab_metodologia = dbc.Tab(
                     label="a. Definición del Problema",
                     children=[
                         html.H3("a. Definición del Problema"),
-                        html.P("""
-                            El problema es de clasificación binaria, donde se busca predecir si el 
-                            ingreso de una persona supera o no los $50.000 USD al año. Las clases 
-                            fueron codificadas como 0 y 1 para mayor facilidad de comprensión, 
-                            siendo 0 menor a 50 mil dólares y 1 mayor a 50 mil dólares. 
-                        """),
-                        html.P("Variable objetivo: Income "),
+                        dcc.Markdown("""
+                           **Problema**: Clasificacion Binaria 
+                           **Variable objetivo**: Income
+                        """),                        
                     ],
                     style={"padding": "20px"}
                 ),
@@ -836,6 +833,8 @@ tab_metodologia = dbc.Tab(
                             ### Proceso de entrenamiento 
                             
                             ![K-Fold](/assets/K-fold.png)
+                            
+                            Se realizo Stratified K-fold con 5 folds para realizar el cross-validation en el Gridsearch
                         """),
                     ],
                     style={"padding": "20px"}
@@ -1025,12 +1024,10 @@ tab_conclusiones = dbc.Tab(
                     - El modelo en general reconoce la mayoria de los casos de ambas clases con pocos falsos negativos en la matriz de confusion 
                     - Las metricas generales del modelo rondan alrededor de 0.7 en la clase de ganancias mayores a 50k y 0.8 para la clase de ganancias 0 
                     - Las variables mas importantes para el modelo son edad, estado civil, horas trabajadas y capital-gain, todas intuitivamente relacionadas con ingresos.
-                    - **Limitaciones del modelo**: el modelo al ser randomforest es bastante tardado en la ejecucion sobre todo en la busqueda de hiperparametros realizada al ser un dataset de tamaño mediano, ademas de que tiene cierto desbalance el dataset lo cual puede complicar los resultados si no se usa tecnicas de balanceo como SMOTE o ADASYN. 
-                    También existen correlaciones entre variables que pueden distorsionar la interpretación de la importancia de las características, por lo que se deben tomar en cuenta estos aspectos si se quieren realizar analisis futuros.
                     
                     ## Conclusion General
-                    En conjunto, el proyecto ofrece una visión robusta y detallada del comportamiento del dataset y demuestra la viabilidad de predecir niveles de ingreso con modelos supervisados. 
-                    Sin embargo, se recomienda profundizar en técnicas de balanceo, selección de características y optimización computacional para mejorar la interpretabilidad y el rendimiento futuro de los modelos.
+                    En conjunto, el proyecto ofrece una visión robusta y detallada del comportamiento del dataset y demuestra la viabilidad de predecir niveles de ingreso con modelos supervisados. Utilizando un modelo robusto de machine learning como RandomForest para poder realizar los analisis de manera eficaz 
+                    Sin embargo, debido a que es un dataset bastante anticuado del año 1994 se recomienda realizar un nuevo estudio con variables actualizadas para poder comprender mejor el analisis de los ingresos en la actualidad
                     """
                 ),
             ],
