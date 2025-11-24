@@ -1041,7 +1041,7 @@ tab_conclusiones = dbc.Tab(
 
 tabs = dcc.Tabs([tab_introduccion,tab_contexto,tab_problema,tab_objetivos,tab_teorico,tab_metodologia,tab_etl,tab_Resultados,tab_conclusiones])
 app.layout = dbc.Container([
-    html.H1(" Analisis de predicciones de ingresos mediante el Adult dataset", className="text-center my-4"),
+    html.H1(" Analisis de predicciones de ingresos del Adult dataset mediante el modelo de RandomForest", className="text-center my-4"),
     html.Hr(),
     tabs
 ], fluid=True)
