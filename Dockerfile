@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8050
 
 # Comando por defecto (se puede sobrescribir en Render)
-CMD ["python", "dashboard.py"]
+CMD ["python", "cargar_postgres.py"]
