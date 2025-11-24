@@ -716,9 +716,10 @@ $$
 3. **Árboles no podados** que capturan toda la estructura de los datos.
 
 Cada árbol produce una predicción 
-$$ 
-\\hat{y}^{(b)}(x) 
-$$.  
+$$
+\hat{y}^{(b)}(x) 
+$$
+
 La predicción final del bosque es el resultado de una votación mayoritaria:
 
 $$
